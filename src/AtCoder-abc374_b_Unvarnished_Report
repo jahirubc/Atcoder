@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+	    String S = sc.nextLine();
+	    String T = sc.nextLine();
+	    int minLength = Math.min(S.length(), T.length());
+	            
+	    for (int i = 0; i < minLength; i++) {
+            if (S.charAt(i) != T.charAt(i)) {
+                System.out.println(i + 1); 
+                return;
+            }
+        }
+		  if (S.length() != T.length()) {
+            System.out.println(minLength + 1);
+        } else {
+            System.out.println(0); 
+        }
+
+        sc.close();
+	}
+}
